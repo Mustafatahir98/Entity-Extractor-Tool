@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #0056b3; /* Blue */
+    --secondary-color: #007bff; /* Light blue */
+    --accent-color: #ffcc00; /* Yellow */
+    --bg-color: #ffffff; /* White background */
+    --text-color: #333333; /* Dark gray text */
+    --border-color: #e0e0e0; /* Light gray border */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    border: 4px solid var(--border-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.tool-section {
+    background: var(--bg-color); /* White */
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color); /* Light gray border */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tool-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.tool-section h2 {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    padding: 0.75rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn {
+    background-color: var(--primary-color); /* Blue */
+    border: none;
+    border-radius: 5px;
+    color: var(--bg-color); /* White text */
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color); /* Light blue */
+    transform: scale(1.05);
+}
+
+#loading-spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--border-color); /* Lighter border */
+    border-top: 4px solid var(--primary-color); /* Primary color for top border */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* This makes the spinner rotate */
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.visible-spinner {
+    display: block !important;
+}
+
+
+.results-section {
+    display: none;
+    background: var(--bg-color); /* White */
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid var(--border-color); /* Light gray border */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.results-section h2 {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#results-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#results-list li {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+#results-list li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#results-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#entities-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+#entities-table th,
+#entities-table td {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    text-align: left;
+}
+
+#entities-table th {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+#entities-table tr {
+    transition: all 0.3s ease;
+}
+
+#entities-table tr:hover td {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#export-csv-btn {
+    margin-top: 1rem;
+    background-color: #27ae60;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    border: none;
+    color: #fff; /* Black text */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#export-csv-btn:hover {
+    background-color: var(--primary-color); /* Blue */
+    color: var(--bg-color); /* White */
+    opacity: 0.9;
+}
+
