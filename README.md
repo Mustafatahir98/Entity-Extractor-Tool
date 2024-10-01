@@ -1,0 +1,2 @@
+# Entity Extractor Tool
+ This PHP template creates an "Entity Extractor" tool for WordPress, allowing users to extract entities from URLs, keywords, or sitemap links. It integrates with the TextRazor and Google Custom Search APIs to retrieve and filter relevant data. Users can view results in tables, export data to CSV, and track results for entity counts. The tool includes a loading spinner and user-friendly UI.
